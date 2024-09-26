@@ -7,14 +7,14 @@ const App = () => {
 
  const[Quote, setQuote] = useState();
  const[Author, setAuthor] = useState();
- // const[ImageAuthor, setImageAuthor] = useState();
+
 
   const randomQuote = () => {
     fetch("https://zenquotes.io/api/random").then(res => res.json()).then(result => {
       console.log(result[0].q);
       setQuote(result[0].q)
       setAuthor(result[0].a)
-      // setImageAuthor(result[0].i)
+  
     })
   }
 
@@ -24,7 +24,7 @@ const App = () => {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#4B0082",
+        backgroundColor: "#2ADCBE",
       }}
     >
       <View
@@ -44,7 +44,7 @@ const App = () => {
             color: "#333",
           }}
         >
-          Quote of the Day
+          Quote do dia
         </Text>
         <Text
           style={{
@@ -75,7 +75,7 @@ const App = () => {
         <TouchableOpacity
           onPress={randomQuote}
           style={{
-            backgroundColor: '#4B0082',
+            backgroundColor: '#2ADB45',
             padding: 20,
             borderRadius: 30,
             marginVertical: 20,
